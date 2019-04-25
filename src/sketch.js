@@ -95,7 +95,6 @@ function draw() {
 	//rect(bx, by, textSize, textSize);
 	//fill(0);
 	//textSize(40);
-	//text("POLLITA",bx,by);
 
 	for (var i=0; i<wordList.length; i++) {
 		//wordList[i].move();
@@ -125,7 +124,7 @@ function mousePressed() {
 
 /*function mouseClicked(MouseEvent evt){
 	if (evt.getCount() == 2)doubleClicked();
-}
+}*/
 
 function doubleClicked(){
 	var index = getWordIndex();
@@ -133,7 +132,7 @@ function doubleClicked(){
 		if(index!=-1) {
 			deleteWord(index);
 		}
-}*/
+}
 
 function mouseDragged() {
 	var index = getWordIndex();
