@@ -45,7 +45,7 @@ function setup() {
     wordList.push(new Words());
 }*/
 	createWord();
-	setInterval(createWord,5000);
+	setInterval(createWord,4000);
 	playNote();
 	setInterval(playNote,500);
 }
@@ -181,14 +181,19 @@ function getWordIndex(){
 	return -1;
 }
 function createWord(){
-	if(wordCount<wordLimit){
+	if(wordList.length<wordLimit){
 		wordList.push(new Words());
 		wordCount++;
 	}
+    else{
+        wordList = [];
+        wordCount=0;
+    }
 }
 
 function deleteWord(i){
-	wordList.splice(i,1);
+	//wordList.splice(i,1);
+    wordList.splice(i,1);
 	wordCount--;
 }
 
